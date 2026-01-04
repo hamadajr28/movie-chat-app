@@ -1,0 +1,31 @@
+async function sendComment() {
+  const data = {
+    user: username.value,
+    movie: movie.value,
+    text: comment.value
+  };
+
+  await fetch("/comments", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  loadComments();
+}
+
+async function loadComments() {
+  const res = await fetch("/comments");
+  const comments = await res.json();
+
+  const div = document.getElementById("comments");
+  div.innerHTML = "";
+
+  comments.forEach(c => {
+    const p = document.createElement("p");
+    p.innerHTML = `<b>${c.user}</b> (${c.movie}): ${c.text}`;
+    div.appendChild(p);
+  });
+}
+
+loadComments();

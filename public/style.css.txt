@@ -1,0 +1,17 @@
+body {
+  background: black;
+  color: white;
+  font-family: Arial;
+}
+
+input, textarea, button {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+#comments p, #messages div {
+  background: #222;
+  padding: 6px;
+  margin: 4px 0;
+}

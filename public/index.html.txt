@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎬 Movie & TV Talk</h1>
+
+<input id="username" placeholder="Your name">
+<input id="movie" placeholder="Movie or TV show">
+<textarea id="comment" placeholder="Your comment"></textarea>
+<button onclick="sendComment()">Post</button>
+
+<h2>Comments</h2>
+<div id="comments"></div>
+
+<br>
+<a href="chat.html">Go to Live Chat 💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
